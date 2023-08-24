@@ -3,7 +3,7 @@ import { getCellVertexData } from './vertex-data.js';
 
 let GRID_WIDTH = 64,
   GRID_HEIGHT = 64;
-const CELL_SIZE = 16;
+const CELL_SIZE = 10;
 const MAX_GRID_SIZE = 512 * 512;
 
 async function main() {
