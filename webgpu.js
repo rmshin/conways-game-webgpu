@@ -82,14 +82,14 @@ async function setup() {
         fn cs(@builtin(global_invocation_id) cell: vec3u) {
           
           let idx = cellIndex(cell.xy);
-          let activeNeighbors = cellActive(cell.x+1, cell.y+1) +
-                                cellActive(cell.x+1, cell.y) +
-                                cellActive(cell.x+1, cell.y-1) +
-                                cellActive(cell.x, cell.y-1) +
-                                cellActive(cell.x-1, cell.y-1) +
-                                cellActive(cell.x-1, cell.y) +
-                                cellActive(cell.x-1, cell.y+1) +
-                                cellActive(cell.x, cell.y+1);
+          let activeNeighbors = cellActive(cell.x + 1, cell.y + 1) +
+                                cellActive(cell.x + 1, cell.y) +
+                                cellActive(cell.x + 1, cell.y - 1) +
+                                cellActive(cell.x, cell.y - 1) +
+                                cellActive(cell.x - 1, cell.y - 1) +
+                                cellActive(cell.x - 1, cell.y) +
+                                cellActive(cell.x - 1, cell.y + 1) +
+                                cellActive(cell.x, cell.y + 1);
 
           switch (activeNeighbors) {
             case 2: { // active cells with 2 neighbours stay active
